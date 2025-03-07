@@ -19,7 +19,16 @@ function App() {
     window.localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  const filteredList = list.filter(({ category }) => filter === "all" || category === filter);
+  //filter the list based on the selected category
+  const filteredList = list.filter(
+    //Select the default category or
+    ({ category }) => filter === "all" || 
+
+    //if the category is an array, 
+    // check if the filter is included in the array
+     (Array.isArray(category) && category.includes(filter))
+    
+    );
 
   return (
     <main>

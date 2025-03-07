@@ -10,7 +10,7 @@
     {
         "id": "img0002",
         "name": "Cruise",
-        "category": "travel",
+        "category": ["travel", "object"],
         "description": "Norwegian Cruise Line",
         "image": "image2",
         "alt": "Norwegian Cruise Line",
@@ -19,7 +19,7 @@
     {
         "id": "img0003",
         "name": "Island",
-        "category": "nature",
+        "category": ["nature", "travel"],
         "description": "A beautiful island situated in the Caribbean",
         "image": "image3",
         "alt": "Island",
@@ -91,7 +91,7 @@
     {
         "id": "img00011",
         "name": "SkyTrain",
-        "category": "object",
+        "category": ["object", "travel"],
         "description": "Modern Metrotown Station lighting ",
         "image": "image11",
         "alt": "Train station in Burnaby",
