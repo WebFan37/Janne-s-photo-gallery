@@ -3,16 +3,19 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from 'react';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import Comment from './Comment.jsx'
 
 
 function Item({id, name, price, description, image, alt, cart, setCart}) {
 
-    const [comments, setComments] = useState([]);
+    
     const [aime, setAime] = useState(0);
     const [dislike, setDislike] = useState(0);
-    const [inputValue, setInputValue] = useState('');
     const [inputNumber, setInputNumber] = useState('');  // Keep this for manual input
     const [count, setCount] = useState(0); // This is for counting quantity when using buttons
+    const [ouvert, setOuvert] = useState(false)
 
     function compter() {
         setCount(count + 1);
@@ -36,21 +39,20 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
         setAime(aime - 1);
     }
 
-    function send() {
-        if (inputValue.trim() !== '') {
-            setComments([...comments, inputValue]);
-            setInputValue('');
-        }
+    function ouvrirCommentaire(){
+        setOuvert(true);
+        console.log(ouvert);
+        
     }
 
-    function handleInputChange(e) {
+    // function handleInputChange(e) {
 
-        // Ensure only numbers are allowed
-        const value = e.target.value;
-        if (!isNaN(value) && value >= 0) {
-            setInputNumber(value); // Update manual input
-        }
-    }
+    //     // Ensure only numbers are allowed
+    //     const value = e.target.value;
+    //     if (!isNaN(value) && value >= 0) {
+    //         setInputNumber(value); // Update manual input
+    //     }
+    // }
 
     function AddCart() {
         const quantityToAdd = inputNumber.trim() !== '' ? parseInt(inputNumber) : count;
@@ -88,30 +90,16 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
             <p>${price}</p>
             <img src={"./gallery/" + image + ".jpg"} alt={alt}/>
 
-            <div className='commentaire'>
-                <input 
-                    type="text" 
-                    id='textZone' 
-                    placeholder='Commenter ici!' 
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                />
-                <SendIcon onClick={send} />
-            </div>
 
-            {/* Displaying each comment sent */}
-            {comments.map((comment, index) => (
-                <p key={index}> Commentaire: {comment}</p>
-            ))}
-
-            <p>QUANTITY: 
-                <input 
+            <p>
+                QUANTITY: {count}
+                {/* <input 
                     type="text" 
                     placeholder={count} 
                     className='boutonQuant' 
                     value={inputNumber}
                     onChange={handleInputChange}
-                />
+                /> */}
 
                 <div className='quantity'>
                     <button onClick={compter}>+</button>
@@ -121,6 +109,15 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
 
             <div className='Add'>
                 <button onClick={AddCart}> Add to cart</button>
+                <div className='comment'>
+                    Comment
+                    <Fab aria-label="add" className='buttonComm' onClick={ouvrirCommentaire}>
+                        <AddIcon />
+                     </Fab>
+
+                    {ouvert && <Comment ouvert={ouvert} setOuvert={setOuvert}/>}
+                </div>
+               
                 <button> Buy</button>
             </div>
         </section>

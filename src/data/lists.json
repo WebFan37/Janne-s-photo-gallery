@@ -46,7 +46,7 @@
     {
         "id": "img0006",
         "name": "Moon",
-        "category": "planet",
+        "category": "universe",
         "description": "Watch the beautiful crescent moon",
         "image": "image6",
         "alt": "crescent moon upside down",
@@ -55,7 +55,7 @@
     {
         "id": "img0007",
         "name": "Milky Way",
-        "category": "planet",
+        "category": "universe",
         "description": "Enjoy the jaw dropping view of the clear evening sky at cottage",
         "image": "image7",
         "alt": "Beautiful Milky Way",
@@ -73,7 +73,7 @@
     {
         "id": "img0009",
         "name": "Constellation Aquila",
-        "category": "planet",
+        "category": "universe",
         "description": "A part of the Aquila constellation",
         "image": "image9",
         "alt": "3 bright stars accompanied by billions of dim stars",

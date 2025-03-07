@@ -21,12 +21,13 @@ function Header({ cart, setFilter, filter }) {
             <p>Price: ${Object.values(cart).reduce((acc, item) => acc + item.TheQuantity * item.ThePrice, 0).toFixed(2)}</p>
           </span>
         </div>
+        
   
         <select name="filtre" id="filtre" onChange={(e) => setFilter(e.target.value)} value={filter}>
           <option value="all">All Photos</option>
           <option value="nature">Nature</option>
           <option value="travel">Travel</option>
-          <option value="planet">Universe</option>
+          <option value="universe">Universe</option>
           <option value="object">Object</option>
         </select>
       </header>
