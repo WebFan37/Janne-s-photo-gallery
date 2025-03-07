@@ -6,10 +6,8 @@ import list from './data/lists.json'
 
 import Myitem from './Item.jsx'
 import MyHeader from './Header.jsx'
-
-
-
 import ItemList from './ItemList.jsx';
+import Footer from './Footer.jsx'
 
 function App() {
   const [cart, setCart] = useState(() => JSON.parse(window.localStorage.getItem("cart")) || {});
@@ -34,6 +32,7 @@ function App() {
     <main>
       <MyHeader cart={cart} setFilter={setFilter} filter={filter} />
       <ItemList list={filteredList} cart={cart} setCart={setCart} /> {/* Pass filtered list */}
+      <Footer/>
     </main>
   );
 }

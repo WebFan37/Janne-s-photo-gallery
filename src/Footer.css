@@ -1,0 +1,11 @@
+.footer{
+    background-color: rgba(0, 0, 0, 0.829);
+    height:20vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        margin: 2rem;
+    }
+}
