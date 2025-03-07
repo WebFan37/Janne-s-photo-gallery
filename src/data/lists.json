@@ -1,0 +1,110 @@
+[
+    {
+        "id": "img0001",
+        "name": "Night Candle",
+        "category": "object",
+        "description": "Welcome to the cottage in the woods with a small candle",
+        "image": "image1",
+        "price": 1.25
+    },
+    {
+        "id": "img0002",
+        "name": "Cruise",
+        "category": "travel",
+        "description": "Norwegian Cruise Line",
+        "image": "image2",
+        "alt": "Norwegian Cruise Line",
+        "price": 0.5
+    },
+    {
+        "id": "img0003",
+        "name": "Island",
+        "category": "nature",
+        "description": "A beautiful island situated in the Caribbean",
+        "image": "image3",
+        "alt": "Island",
+        "price": 1.5
+    },
+    {
+        "id": "img0004",
+        "name": "Port",
+        "category": "travel",
+        "description": "Costa Maya port",
+        "image": "image4",
+        "alt": "Cruise port ",
+        "price": 2
+    },
+    {
+        "id": "img0005",
+        "name": "Travel",
+        "category": "travel",
+        "description": "Travel to New Orleans",
+        "image": "image5",
+        "alt": "On a plane to New Orleans",
+        "price": 1
+    },
+    {
+        "id": "img0006",
+        "name": "Moon",
+        "category": "planet",
+        "description": "Watch the beautiful crescent moon",
+        "image": "image6",
+        "alt": "crescent moon upside down",
+        "price": 1
+    },
+    {
+        "id": "img0007",
+        "name": "Milky Way",
+        "category": "planet",
+        "description": "Enjoy the jaw dropping view of the clear evening sky at cottage",
+        "image": "image7",
+        "alt": "Beautiful Milky Way",
+        "price": 2.25
+    },
+    {
+        "id": "img0008",
+        "name": "Fireworks",
+        "category": "object",
+        "description": "Exploding fireworks in the sky",
+        "image": "image8",
+        "alt": "Firework explosion in the sky",
+        "price": 2.5
+    },
+    {
+        "id": "img0009",
+        "name": "Constellation Aquila",
+        "category": "planet",
+        "description": "A part of the Aquila constellation",
+        "image": "image9",
+        "alt": "3 bright stars accompanied by billions of dim stars",
+        "price": 2.75
+    },
+    {
+        "id": "img00010",
+        "name": "British Columbian Mountains",
+        "category": "nature",
+        "description": "Epic view of the British Columbian Mountains near Chilliwack River Provincial Park",
+        "image": "image10",
+        "alt": "Snowy mountains",
+        "price": 2.5
+    },
+    {
+        "id": "img00011",
+        "name": "SkyTrain",
+        "category": "object",
+        "description": "Modern Metrotown Station lighting ",
+        "image": "image11",
+        "alt": "Train station in Burnaby",
+        "price": 2
+    },
+    {
+        "id": "img00012",
+        "name": "Sunset in the wood",
+        "category": "nature",
+        "description": "The red sun setting down in the woods",
+        "image": "image12",
+        "alt": "Sunset in the woods",
+        "price": 2.75
+    }
+    
+]

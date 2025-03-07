@@ -1,0 +1,9 @@
+.grocery-list {
+  width: 100vw;
+  background-color: rgba(9, 69, 133, 0.799);
+
+  p{
+    /* color: white; */
+    margin: 2rem;
+  }
+}
