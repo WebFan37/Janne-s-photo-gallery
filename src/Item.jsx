@@ -16,6 +16,9 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
     const [inputNumber, setInputNumber] = useState('');  // Keep this for manual input
     const [count, setCount] = useState(0); // This is for counting quantity when using buttons
     const [ouvert, setOuvert] = useState(false)
+    const [imageOuvert, setImageOuvert] = useState(false);
+    const [imageSource, setImageSource] = useState('');
+    
 
     function compter() {
         setCount(count + 1);
@@ -41,18 +44,35 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
 
     function ouvrirCommentaire(){
         setOuvert(true);
-        console.log(ouvert);
+        // console.log(ouvert);
         
     }
 
-    // function handleInputChange(e) {
 
-    //     // Ensure only numbers are allowed
-    //     const value = e.target.value;
-    //     if (!isNaN(value) && value >= 0) {
-    //         setInputNumber(value); // Update manual input
-    //     }
-    // }
+//PREVENT SCREENSHOT//
+//====== DESKTOP PC =====//
+
+window.addEventListener("keydown",(event) => {
+
+    if(event.key === "PrintScreen"){
+        alert("Capture d'écran n'est pas autorisé")
+        event.preventDefault();
+    }
+
+} )
+
+function ouvrirImage(){
+    const imageSrc = "./gallery/" + image + ".jpg" 
+    setImageSource(imageSrc);
+    setImageOuvert(true) 
+}
+
+// function fermerImage(){
+//     setImageOuvert(false)
+//     setImageSource('');
+// }
+
+
 
     function AddCart() {
         const quantityToAdd = inputNumber.trim() !== '' ? parseInt(inputNumber) : count;
@@ -88,18 +108,28 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
             <h3>{name}</h3>
             <p>{description}</p>
             <p>${price}</p>
-            <img src={"./gallery/" + image + ".jpg"} alt={alt}/>
+            <img src={"./gallery/" + image + ".jpg"} alt={alt} 
+           draggable ={false} onClick = {ouvrirImage}/>
+
+           {/* OPEN IMAGE */}
+           {imageOuvert && (
+            <div >
+                <div style={modalStyles}>
+                    <div style={overlayStyles} onClick={closeModal}></div>
+                    <div style={modalContentStyles}>
+                        <img src={imageSrc} alt="Full screen" style={imageStyles} />
+                    </div>
+                </div>
+
+            </div>
+           )}
+
+           
+           
 
 
             <p>
                 QUANTITY: {count}
-                {/* <input 
-                    type="text" 
-                    placeholder={count} 
-                    className='boutonQuant' 
-                    value={inputNumber}
-                    onChange={handleInputChange}
-                /> */}
 
                 <div className='quantity'>
                     <button onClick={compter}>+</button>
@@ -118,11 +148,51 @@ function Item({id, name, price, description, image, alt, cart, setCart}) {
                     {ouvert && <Comment ouvert={ouvert} setOuvert={setOuvert}/>}
                 </div>
                
-                <button> Buy</button>
+                <button onClick={() => {
+                    alert("Section stanby for development")
+                }}> Buy</button>
             </div>
         </section>
     );
+    
+
+
 }
+
+    // Inline styles for the modal
+    const modalStyles = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000,
+      };
+      
+      const overlayStyles = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent black background
+        backdropFilter: 'blur(5px)',  // Blurry background effect
+      };
+      
+      const modalContentStyles = {
+        position: 'relative',
+        zIndex: 2,
+      };
+      
+      const imageStyles = {
+        maxWidth: '90vw',   // 90% of the browser's width
+        maxHeight: '90vh',  // 90% of the browser's height
+        objectFit: 'contain', // Preserve the aspect ratio while scaling
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', // Optional: Add shadow to make the image pop
+      };
 
 
 export default Item
