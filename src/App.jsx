@@ -24,9 +24,14 @@ function App() {
 
     //if the category is an array, 
     // check if the filter is included in the array
-     (Array.isArray(category) && category.includes(filter))
+     (Array.isArray(category) && category.includes(filter)) 
+
+     //Check also if the filter is included in string
+     || category === filter
     
     );
+   
+    
 
   return (
     <main>

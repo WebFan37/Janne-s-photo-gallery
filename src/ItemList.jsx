@@ -4,6 +4,9 @@ import { useState } from 'react';
 import Myitem from './Item.jsx';
 
 function ItemList({ list, cart, setCart }) {
+
+  console.log(list);
+  
   return (
     <section className="grocery-list">
       <p>
