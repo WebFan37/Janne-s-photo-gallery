@@ -9,4 +9,8 @@ Currently, two official plugins are available:
 
 # Photo Gallery Project
 Ceci est un projet qui combine tous les notions du cours de React
+This is a french-English project that combine all class notions of React. 
+
+Venez voir les photos que j'ai pris durant les années ! 
+L'intégration d'achat sera développer dans le futur. Donc, vous pourrez acheter ces photos en version électronique !
 
