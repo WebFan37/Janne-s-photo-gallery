@@ -72,39 +72,6 @@ function fermerImage() {
     setImageSource('');
 }
 
-// function openImageFullScreen() {
-//     if (imageSource) {
-//         const newTab = window.open();
-//         newTab.document.write(`
-//             <html>
-//                 <head>
-//                     <title>Full Screen Image</title>
-//                     <style>
-//                         body {
-//                             margin: 0;
-//                             display: flex;
-//                             justify-content: center;
-//                             align-items: center;
-//                             height: 100vh;
-//                             background: black;
-//                         }
-//                         img {
-//                             max-width: 100%;
-//                             max-height: 100%;
-//                             object-fit: contain;
-//                         }
-//                     </style>
-//                 </head>
-//                 <body>
-//                     <img src="${imageSource}" alt="Full screen image" />
-//                 </body>
-//             </html>
-//         `);
-//     }
-// }
-
-
-
     function AddCart() {
         const quantityToAdd = inputNumber.trim() !== '' ? parseInt(inputNumber) : count;
 
@@ -143,17 +110,20 @@ function fermerImage() {
            draggable ={false} onClick = {ouvrirImage}/>
 
            {/* OPEN IMAGE */}
-           {/* {imageOuvert && (
+           {imageOuvert && (
             <div >
                 <div style={modalStyles}>
-                    <div style={overlayStyles} onClick={openImageFullScreen}></div>
+                    <div style={overlayStyles}></div>
                     <div style={modalContentStyles}>
-                        <img src={imageSource} alt="Full screen" style={imageStyles} />
+                        <img src={imageSource} alt="Full screen" style={imageStyles} draggable ={false}/>
+                        <button onClick={fermerImage} style={closeButton}>
+                            X
+                        </button>
                     </div>
                 </div>
 
             </div>
-           )} */}
+           )}
 
            
            
@@ -224,6 +194,18 @@ function fermerImage() {
         objectFit: 'contain', // Preserve the aspect ratio while scaling
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', // Optional: Add shadow to make the image pop
       };
+
+      const closeButton = {
+        position: 'absolute',
+        top: '1rem',
+        right: '1rem',
+        backgroundColor: 'transparent',
+        border: 'none',
+        color: 'white',
+        fontSize: '2rem', 
+        zIndex: 2, 
+        cursor: 'pointer'
+      }
 
 
 export default Item
