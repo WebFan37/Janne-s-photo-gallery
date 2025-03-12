@@ -2,7 +2,7 @@
 import './ItemList.css';
 import EachItem from './Item.jsx';
 
-function ItemList({ list, cart, setCart }) {
+function ItemList({ list, cart, setCart}) {
   return (
     <section className="grocery-list">
       <p>

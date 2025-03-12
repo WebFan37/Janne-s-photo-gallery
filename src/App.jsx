@@ -11,11 +11,16 @@ function App() {
   const [cart, setCart] = useState(() => JSON.parse(window.localStorage.getItem("cart")) || {});
   const [filter, setFilter] = useState("all");
   const [triage, setTriage] = useState("None");
+  // const [commentMemory, setCommentMemory] = useState(() => JSON.parse(window.localStorage.getItem("comment")) || {})
 
-  useEffect(() => {
-    window.localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
 
+  // //USE EFFECT FOR STORING THE COMMENT
+  // useEffect(() => {window.localStorage.setItem("comment", JSON.stringify(commentMemory)); }, [commentMemory])
+
+  //USE EFFECT FOR CART SECTION
+  useEffect(() => {window.localStorage.setItem("cart", JSON.stringify(cart));}, [cart]);
+
+  
   // Filter and sort the list
   const filteredTriageList = [...list]
     .filter(({ category }) =>

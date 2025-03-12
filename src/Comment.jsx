@@ -6,23 +6,35 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import SendIcon from '@mui/icons-material/Send';
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 export default function Comment({ouvert, setOuvert}) {
 
      const [comments, setComments] = useState([]);
      const [inputValue, setInputValue] = useState('');
+     const [commentMemory, setCommentMemory] = useState(() => JSON.parse(window.localStorage.getItem("comment")) || {})
+
+      //USE EFFECT FOR STORING THE COMMENT
+  useEffect(() => {window.localStorage.setItem("comment", JSON.stringify(commentMemory)); }, [commentMemory])
 
     function fermer(){
         setOuvert(false)
     }
 
     function send() {
+
+      const commentProps = {
+        id: crypto.randomUUID(),
+        Date: new Date().toLocaleString(),
+        Content: inputValue
+
+      }
         if (inputValue.trim() !== '') {
-            setComments([...comments, inputValue]);
+            setComments([...comments, commentProps]);
             setInputValue('');
         }
+
+        setCommentMemory(comments)
     }
 
 
@@ -62,11 +74,14 @@ export default function Comment({ouvert, setOuvert}) {
          
          
             {/* Displaying each comment sent */}
-            {comments.map((comment, index) => (
+            {comments.map((comment) => (
                 <div className='sectionCommentaire'>
-                    <p key={index}>
-                    {comment}
-                    </p>
+
+                  <div className='oneComment'>
+                    <p key={comment.id}>{comment.Content}</p>
+                    <p>Commented on {comment.Date}</p>
+                  </div>
+                    
 
                 </div>
                 
