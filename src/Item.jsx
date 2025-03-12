@@ -61,15 +61,46 @@ window.addEventListener("keydown",(event) => {
 
 } )
 
-function ouvrirImage(){
-    const imageSrc = "./gallery/" + image + ".jpg" 
+function ouvrirImage() {
+    const imageSrc = "./gallery/" + image + ".jpg"; 
     setImageSource(imageSrc);
-    setImageOuvert(true) 
+    setImageOuvert(true);
 }
 
-// function fermerImage(){
-//     setImageOuvert(false)
-//     setImageSource('');
+function fermerImage() {
+    setImageOuvert(false);
+    setImageSource('');
+}
+
+// function openImageFullScreen() {
+//     if (imageSource) {
+//         const newTab = window.open();
+//         newTab.document.write(`
+//             <html>
+//                 <head>
+//                     <title>Full Screen Image</title>
+//                     <style>
+//                         body {
+//                             margin: 0;
+//                             display: flex;
+//                             justify-content: center;
+//                             align-items: center;
+//                             height: 100vh;
+//                             background: black;
+//                         }
+//                         img {
+//                             max-width: 100%;
+//                             max-height: 100%;
+//                             object-fit: contain;
+//                         }
+//                     </style>
+//                 </head>
+//                 <body>
+//                     <img src="${imageSource}" alt="Full screen image" />
+//                 </body>
+//             </html>
+//         `);
+//     }
 // }
 
 
@@ -112,17 +143,17 @@ function ouvrirImage(){
            draggable ={false} onClick = {ouvrirImage}/>
 
            {/* OPEN IMAGE */}
-           {imageOuvert && (
+           {/* {imageOuvert && (
             <div >
                 <div style={modalStyles}>
-                    <div style={overlayStyles} onClick={closeModal}></div>
+                    <div style={overlayStyles} onClick={openImageFullScreen}></div>
                     <div style={modalContentStyles}>
-                        <img src={imageSrc} alt="Full screen" style={imageStyles} />
+                        <img src={imageSource} alt="Full screen" style={imageStyles} />
                     </div>
                 </div>
 
             </div>
-           )}
+           )} */}
 
            
            
