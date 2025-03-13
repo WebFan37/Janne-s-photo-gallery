@@ -2,7 +2,7 @@
 import './Header.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-function Header({ cart, setFilter, filter, triage, setTriage }) {
+function Header({ cart, setFilter, filter, triage, setTriage}) {
   return (
     <header>
       <h1>Janne's Photo Gallery</h1>
@@ -28,12 +28,15 @@ function Header({ cart, setFilter, filter, triage, setTriage }) {
 
       {/* Sorting Dropdown */}
       <select name="triage" value={triage} onChange={(e) => setTriage(e.target.value)}>
-        <option value="None">Sort by</option>
+        <option value="None">None</option>
         <option value="priceAsc">Price / Low to High</option>
         <option value="priceDesc">Price / High to Low</option>
         <option value="nameAsc">Name / A-Z</option>
         <option value="nameDesc">Name / Z-A</option>
+        <option value="dateAsc">Date Taken / New to Old</option>
+        <option value="dateDesc">Date Taken / Old to New</option>
       </select>
+
     </header>
   );
 }

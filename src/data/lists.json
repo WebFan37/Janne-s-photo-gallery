@@ -5,7 +5,9 @@
         "category": "object",
         "description": "Welcome to the cottage in the woods with a small candle",
         "image": "image1",
-        "price": 1.25
+        "price": 1.25,
+        "dateTaken" : "2024-07-05",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img0002",
@@ -14,7 +16,9 @@
         "description": "Norwegian Cruise Line",
         "image": "image2",
         "alt": "Norwegian Cruise Line",
-        "price": 0.5
+        "price": 0.5,
+        "dateTaken" : "2018-12-27",
+        "deviceTaken":  " iPhone SE 1st Gen"
     },
     {
         "id": "img0003",
@@ -23,7 +27,9 @@
         "description": "A beautiful island situated in the Caribbean",
         "image": "image3",
         "alt": "Island",
-        "price": 1.5
+        "price": 1.5,
+        "dateTaken" : "2018-12-27",
+        "deviceTaken":  "iPhone SE 1st Gen"
     },
     {
         "id": "img0004",
@@ -32,7 +38,10 @@
         "description": "Costa Maya port",
         "image": "image4",
         "alt": "Cruise port ",
-        "price": 2
+        "price": 2,
+        "dateTaken" : "2018-12-28",
+        "deviceTaken":  "iPhone SE 1st Gen"
+
     },
     {
         "id": "img0005",
@@ -41,7 +50,9 @@
         "description": "Travel to New Orleans",
         "image": "image5",
         "alt": "On a plane to New Orleans",
-        "price": 1
+        "price": 1,
+        "dateTaken" : "2018-12-22",
+        "deviceTaken":  "Nikon D3300"
     },
     {
         "id": "img0006",
@@ -50,7 +61,9 @@
         "description": "Watch the beautiful crescent moon",
         "image": "image6",
         "alt": "crescent moon upside down",
-        "price": 1
+        "price": 1,
+        "dateTaken" : "2025-02-01",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img0007",
@@ -59,7 +72,9 @@
         "description": "Enjoy the jaw dropping view of the clear evening sky at cottage",
         "image": "image7",
         "alt": "Beautiful Milky Way",
-        "price": 2.25
+        "price": 2.25,
+        "dateTaken" : "2024-07-06",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img0008",
@@ -68,7 +83,9 @@
         "description": "Exploding fireworks in the sky",
         "image": "image8",
         "alt": "Firework explosion in the sky",
-        "price": 2.5
+        "price": 2.5,
+        "dateTaken" : "2022-08-06",
+        "deviceTaken":  " Fujifilm XT3"
     },
     {
         "id": "img0009",
@@ -77,7 +94,9 @@
         "description": "A part of the Aquila constellation",
         "image": "image9",
         "alt": "3 bright stars accompanied by billions of dim stars",
-        "price": 2.75
+        "price": 2.75,
+        "dateTaken" : "2024-07-27",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img00010",
@@ -86,7 +105,9 @@
         "description": "Epic view of the British Columbian Mountains near Chilliwack River Provincial Park",
         "image": "image10",
         "alt": "Snowy mountains",
-        "price": 2.5
+        "price": 2.5,
+        "dateTaken" : "2024-03-30",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img00011",
@@ -95,7 +116,9 @@
         "description": "Modern Metrotown Station lighting ",
         "image": "image11",
         "alt": "Train station in Burnaby",
-        "price": 2
+        "price": 2,
+        "dateTaken" : "2024-03-24",
+        "deviceTaken":  " Galaxy S23 Ultra"
     },
     {
         "id": "img00012",
@@ -104,7 +127,9 @@
         "description": "The red sun setting down in the woods",
         "image": "image12",
         "alt": "Sunset in the woods",
-        "price": 2.75
+        "price": 2.75,
+        "dateTaken" : "2024-10-16",
+        "deviceTaken":  " Galaxy S23 Ultra"
     }
     
 ]

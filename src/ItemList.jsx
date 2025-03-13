@@ -3,6 +3,10 @@ import './ItemList.css';
 import EachItem from './Item.jsx';
 
 function ItemList({ list, cart, setCart}) {
+
+
+  
+
   return (
     <section className="grocery-list">
       <p>
@@ -10,8 +14,11 @@ function ItemList({ list, cart, setCart}) {
         that I have taken over the years. I handpicked these top photos from
         my collection. I hope you enjoy viewing them as much as I enjoyed taking them.
       </p>
+      <p>
+        Click on the image to view in full screen
+      </p>
 
-      {list.map(({ id, name, price, description, image, alt }) => (
+      {list.map(({ id, name, price, description, image, alt, dateTaken, deviceTaken }) => (
         <EachItem
           key={id}
           id={id}
@@ -22,6 +29,8 @@ function ItemList({ list, cart, setCart}) {
           alt={alt}
           cart={cart}
           setCart={setCart}
+          dateTaken={dateTaken}
+          deviceTaken={deviceTaken}
         />
       ))}
     </section>

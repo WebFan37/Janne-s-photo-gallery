@@ -30,10 +30,22 @@ function App() {
     )
     .sort(comparison[triage] || (() => 0)); // Default: no sorting
 
+
+
   return (
     <main>
-      <MyHeader cart={cart} setFilter={setFilter} filter={filter} triage={triage} setTriage={setTriage} />
-      <ItemList list={filteredTriageList} cart={cart} setCart={setCart} />
+      <MyHeader 
+      cart={cart} 
+      setFilter={setFilter}
+      filter={filter} 
+      triage={triage} 
+      setTriage={setTriage}
+      />
+      <ItemList 
+      list={filteredTriageList} 
+      cart={cart} 
+      setCart={setCart}
+      />
       <Footer />
     </main>
   );
@@ -47,4 +59,6 @@ const comparison = {
   priceDesc: (a, b) => b.price - a.price,
   nameAsc: (a, b) => a.name.localeCompare(b.name, "en"),
   nameDesc: (a, b) => b.name.localeCompare(a.name, "en"),
+  dateDesc: (a, b) => new Date(a.dateTaken) - new Date(b.dateTaken),
+  dateAsc: (a, b) => new Date (b.dateTaken) - new Date (a.dateTaken)
 };

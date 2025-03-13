@@ -8,7 +8,7 @@ import AddIcon from '@mui/icons-material/Add';
 import Comment from './Comment.jsx'
 
 
-function Item({id, name, price, description, image, alt, cart, setCart}) {
+function Item({id, name, price, description, image, alt, cart, setCart, dateTaken, deviceTaken}) {
 
     
     const [aime, setAime] = useState(0);
@@ -108,6 +108,7 @@ function fermerImage() {
             <p>${price}</p>
             <img src={"./gallery/" + image + ".jpg"} alt={alt} 
            draggable ={false} onClick = {ouvrirImage}/>
+           <p>Date: {dateTaken}. Device: {deviceTaken}</p>
 
            {/* OPEN IMAGE */}
            {imageOuvert && (
